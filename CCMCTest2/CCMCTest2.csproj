@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Classes\Borrower.cs" />
     <Compile Include="Classes\BorrowerOperations.cs" />
+    <Compile Include="Classes\BorrowersDbRespository.cs" />
     <Compile Include="Classes\Loan.cs" />
     <Compile Include="Classes\ValidateLoan.cs" />
     <Compile Include="Program.cs" />
