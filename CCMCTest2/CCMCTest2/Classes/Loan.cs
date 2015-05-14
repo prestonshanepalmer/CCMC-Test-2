@@ -8,23 +8,19 @@ namespace CCMCTest2.Classes
 {
     class Loan
     {
+        public Loan(int id)
+        {
+            Id = id;
+        }
+
         public int Id { get; set; }
 
-        private string _eLoanType = string.Empty; 
-        public string LoanType
+        public enum LoanType
         {
-            get { return _eLoanType; }
-            set
-            {
-                if (value != null)
-                {
-                    _eLoanType = value;
-                }
-                else
-                {
-                    _eLoanType = string.Empty;
-                }
-            }
+            NotSpecified,
+            Conventional,
+            Fha,
+            Arm
         }
 
         public double? Percentage { get; set; }
@@ -53,12 +49,11 @@ namespace CCMCTest2.Classes
 
         public List<Borrower> Borrowers = new List<Borrower>();
 
-        public void CreateBorrower(int id, string name, string gender, double monthlyincome)
+        public void AddBorrower(int id, string name, Borrower.GenderType gender, double monthlyincome)
         {
 
-            Borrower newBorrower = new Borrower();
-            newBorrower.Id = id;
-            newBorrower.Name = name;
+            Borrower newBorrower = new Borrower(id, name);
+            
             newBorrower.Gender = gender;
             newBorrower.MonthlyIncome = monthlyincome;
 

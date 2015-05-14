@@ -1,1 +1,7 @@
 C:\MAIN\projects\CCMCTest2\CCMCTest2\CCMCTest2\bin\Debug\CCMCTest2.exe.config
+C:\Users\shane\Desktop\CCMC-Test-2\CCMCTest2\CCMCTest2\bin\Debug\CCMCTest2.exe.config
+C:\Users\shane\Desktop\CCMC-Test-2\CCMCTest2\CCMCTest2\obj\Debug\CCMCTest2.csprojResolveAssemblyReference.cache
+C:\Users\shane\Desktop\CCMC-Test-2\CCMCTest2\CCMCTest2\bin\Debug\CCMCTest2.exe
+C:\Users\shane\Desktop\CCMC-Test-2\CCMCTest2\CCMCTest2\bin\Debug\CCMCTest2.pdb
+C:\Users\shane\Desktop\CCMC-Test-2\CCMCTest2\CCMCTest2\obj\Debug\CCMCTest2.exe
+C:\Users\shane\Desktop\CCMC-Test-2\CCMCTest2\CCMCTest2\obj\Debug\CCMCTest2.pdb
