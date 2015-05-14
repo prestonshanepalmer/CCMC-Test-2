@@ -15,13 +15,15 @@ namespace CCMCTest2.Classes
 
         public int Id { get; set; }
 
-        public enum LoanType
+        public enum LoanTypeList
         {
             NotSpecified,
             Conventional,
             Fha,
             Arm
         }
+
+        public LoanTypeList LoanType { get; set; }
 
         public double? Percentage { get; set; }
 
@@ -47,19 +49,7 @@ namespace CCMCTest2.Classes
             MonthlyPayment = monthlyPayment;
         }
 
-        public List<Borrower> Borrowers = new List<Borrower>();
-
-        public void AddBorrower(int id, string name, Borrower.GenderType gender, double monthlyincome)
-        {
-
-            Borrower newBorrower = new Borrower(id, name);
-            
-            newBorrower.Gender = gender;
-            newBorrower.MonthlyIncome = monthlyincome;
-
-            Borrowers.Add(newBorrower);
-
-        }
+        public List<Borrower> Borrowers = new List<Borrower>(); 
 
     }
 }

@@ -17,10 +17,11 @@ namespace CCMCTest2
             loan1.TotalLoanAmount = 145321.56;
             loan1.NumberOfMonths = 120;
             loan1.GetMonthlyPayments();
-            loan1.AddBorrower(1, "Homie Johnson", Borrower.GenderType.Male, 432.50);
-            loan1.AddBorrower(2, "Shane Palmer", Borrower.GenderType.Male, 9080.22);
-            loan1.AddBorrower(2, "Christen Skinner", Borrower.GenderType.Female, 10000);
-            
+
+            BorrowersMockDbRespository borrowersListFromDb = new BorrowersMockDbRespository();
+
+            loan1.Borrowers = borrowersListFromDb.GetBorrowers();
+
         }
     }
 }

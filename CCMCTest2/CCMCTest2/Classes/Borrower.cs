@@ -40,10 +40,8 @@ namespace CCMCTest2.Classes
             Female = 3
         }
 
-        
-        public GenderType Gender = new GenderType();
-        
-
+        public GenderType Gender { get; set; }
+      
         public double MonthlyIncome { get; set; }
         
     }
