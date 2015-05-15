@@ -13,17 +13,13 @@ namespace CCMCTest2.Classes
             Id = id;
         }
 
-        public int Id { get; set; }
 
-        public enum LoanTypeList
+        public int Id
         {
-            NotSpecified,
-            Conventional,
-            Fha,
-            Arm
+            get; private set;
         }
 
-        public LoanTypeList LoanType { get; set; }
+        public Enums.LoanTypeList LoanType { get; set; }
 
         public double? Percentage { get; set; }
 
@@ -31,9 +27,22 @@ namespace CCMCTest2.Classes
 
         public int? NumberOfMonths { get; set; }
 
-        public double? MonthlyPayment { get; set; }
+        private double? _monthlyPayment = new double();
+        public double? MonthlyPayment
+        {
+            get
+            {
+                return GetMonthlyPayments();
+            }
+            set
+            {
+                _monthlyPayment = GetMonthlyPayments();
+                value = _monthlyPayment;
+            }
+            
+        }
         
-        public void GetMonthlyPayments()
+        private double? GetMonthlyPayments()
         {
             double? monthlyPayment = new double();
 
@@ -46,10 +55,34 @@ namespace CCMCTest2.Classes
                 monthlyPayment = null;
             }
 
-            MonthlyPayment = monthlyPayment;
+            return monthlyPayment;
         }
 
-        public List<Borrower> Borrowers = new List<Borrower>(); 
+        public List<Borrower> Borrowers = new List<Borrower>();
+
+
+        public void AddBorrower(Borrower borrower)
+        {
+
+            //Borrower borrower1 = new Borrower(1, "Shane Palmer");
+
+            //borrower1.MonthlyIncome = 212.50;
+            //borrower1.Gender = Enums.GenderType.Male;
+
+
+        }
+
+        //public void AddBorrower(int id, string name, Borrower.GenderType gender, double monthlyincome)
+        //{
+
+        //    Borrower newBorrower = new Borrower(id, name);
+
+        //    newBorrower. = gender;
+        //    newBorrower.MonthlyIncome = monthlyincome;
+
+        //    Borrowers.Add(newBorrower);
+
+        //}
 
     }
 }

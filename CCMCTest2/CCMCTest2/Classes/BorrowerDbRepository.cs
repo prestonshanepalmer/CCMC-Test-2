@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CCMCTest2.Classes
 {
-    class BorrowerOperations
+    class BorrowerDbRepository
     {
 
         //public void InsertBorrower(Borrower borrower)

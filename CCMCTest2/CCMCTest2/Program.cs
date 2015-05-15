@@ -12,11 +12,11 @@ namespace CCMCTest2
         static void Main(string[] args)
         {
             Loan loan1 = new Loan(1);
-            //loan1.LoanType.Fha;
+            loan1.LoanType = Enums.LoanTypeList.Fha;
             loan1.Percentage = 56.33;
             loan1.TotalLoanAmount = 145321.56;
             loan1.NumberOfMonths = 120;
-            loan1.GetMonthlyPayments();
+            loan1.MonthlyPayment = loan1.MonthlyPayment;
 
             BorrowersMockDbRespository borrowersListFromDb = new BorrowersMockDbRespository();
 

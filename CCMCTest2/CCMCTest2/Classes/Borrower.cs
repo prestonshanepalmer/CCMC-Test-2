@@ -33,14 +33,9 @@ namespace CCMCTest2.Classes
             }
         }
 
-        public enum GenderType
-        {
-            Unspecified = 1,
-            Male = 2,
-            Female = 3
-        }
+        
 
-        public GenderType Gender { get; set; }
+        public Enums.GenderType Gender { get; set; }
       
         public double MonthlyIncome { get; set; }
         
