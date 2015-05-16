@@ -16,11 +16,18 @@ namespace CCMCTest2
             loan1.Percentage = 56.33;
             loan1.TotalLoanAmount = 145321.56;
             loan1.NumberOfMonths = 120;
-            loan1.MonthlyPayment = loan1.MonthlyPayment;
 
-            BorrowersMockDbRespository borrowersListFromDb = new BorrowersMockDbRespository();
+            Borrower borrower1 = new Borrower(4, "BB King");
+            borrower1.Gender = Enums.GenderType.Male;
+            borrower1.MonthlyIncome = 1.01;
 
-            loan1.Borrowers = borrowersListFromDb.GetBorrowers();
+            loan1.AddBorrower(borrower1);
+
+            
+
+            //BorrowersMockDbRespository borrowersListFromDb = new BorrowersMockDbRespository();
+
+            //loan1.Borrowers = borrowersListFromDb.GetBorrowers();
 
         }
     }

@@ -14,26 +14,9 @@ namespace CCMCTest2.Classes
             Name = name;
         }
 
-        public int Id { get; set; }
+        public int? Id { get; set; }
         
-        private string _name = string.Empty; 
-        public string Name
-        {
-            get { return _name; }
-            set
-            {
-                if (value != null)
-                {
-                    _name = value;
-                }
-                else
-                {
-                    _name = string.Empty;
-                }
-            }
-        }
-
-        
+        public string Name { get; set; }
 
         public Enums.GenderType Gender { get; set; }
       

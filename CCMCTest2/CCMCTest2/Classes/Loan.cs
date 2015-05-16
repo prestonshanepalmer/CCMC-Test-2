@@ -58,31 +58,13 @@ namespace CCMCTest2.Classes
             return monthlyPayment;
         }
 
-        public List<Borrower> Borrowers = new List<Borrower>();
-
-
+        
+        private List<Borrower> Borrowers = new List<Borrower>();
+        
         public void AddBorrower(Borrower borrower)
         {
-
-            //Borrower borrower1 = new Borrower(1, "Shane Palmer");
-
-            //borrower1.MonthlyIncome = 212.50;
-            //borrower1.Gender = Enums.GenderType.Male;
-
-
+            Borrowers.Add(borrower);
         }
-
-        //public void AddBorrower(int id, string name, Borrower.GenderType gender, double monthlyincome)
-        //{
-
-        //    Borrower newBorrower = new Borrower(id, name);
-
-        //    newBorrower. = gender;
-        //    newBorrower.MonthlyIncome = monthlyincome;
-
-        //    Borrowers.Add(newBorrower);
-
-        //}
 
     }
 }
