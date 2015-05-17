@@ -13,7 +13,7 @@ namespace CCMCTest2
         {
             Loan loan1 = new Loan(1);
             loan1.LoanType = Enums.LoanTypeList.Fha;
-            loan1.Percentage = 56.33;
+            loan1.Percentage = 22.22;
             loan1.TotalLoanAmount = 145321.56;
             loan1.NumberOfMonths = 120;
 
@@ -27,6 +27,9 @@ namespace CCMCTest2
 
             loan1.AddBorrower(borrower1);
             loan1.AddBorrower(borrower2);
+
+            ValidateLoan validateLoan = new ValidateLoan();
+            validateLoan.ValidateLoanProperties(loan1);
 
             
 

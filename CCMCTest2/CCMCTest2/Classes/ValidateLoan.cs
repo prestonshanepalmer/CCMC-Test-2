@@ -9,14 +9,42 @@ namespace CCMCTest2.Classes
 {
     class ValidateLoan
     {
-        private const string SameBorrowerName = "The same borrower cannot be added twice.";
+        public List<string> InvalidListMessages = new List<string>(); 
 
-        public void BorrowerNameValidation(object sender, CancelEventArgs e, string borrowername)
+        public List<string> ValidateLoanProperties(Loan loan)
         {
-            if (borrowername == "") 
+
+            if (loan.Id == 1)
             {
-                e.Cancel = true;
+                InvalidListMessages.Add("This Loan ID is already used.");  
             }
+
+            if (loan.LoanType != Enums.LoanTypeList.Fha)
+            {
+                InvalidListMessages.Add("Loan type error message.");
+            }
+
+            if (loan.Percentage != null && loan.Percentage > 0 && loan.Percentage < 100)
+            {
+                InvalidListMessages.Add("Loan percentage out of range.");
+            }
+
+            if (loan.TotalLoanAmount != null && loan.TotalLoanAmount > 0)
+            {
+                InvalidListMessages.Add("Total loan amount 0 or below.");
+            }
+
+            if (loan.NumberOfMonths != null && loan.NumberOfMonths > 120)
+            {
+                InvalidListMessages.Add("Number of months error message.");
+            }
+
+            if (loan.MonthlyPayment != null && loan.MonthlyPayment < 2000.00)
+            {
+                InvalidListMessages.Add("Monthly payment amount error message.");
+            }
+
+            return InvalidListMessages;
         }
         
     }
