@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Configuration;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,12 @@ namespace CCMCTest2.Classes
 {
     class BorrowersMockDbRespository
     {
+        //Not quite finished with these and not sure to what extend you want these stubbed. Should for example, UpdateBorrower
+        //function to update a borrower to new info... I can do that. But, InsertBorrower directly refers to inserting into the database,
+        //so what would I do for that? If it was mock functional, then it would work as a simple addition to the list of Borrowers and
+        //that would be different from the expected Insert functionality.... would it make sense to do that? So I simply set the methods
+        //that would be there for now. GetBorrowers is an exception because it can easily be set with mock data. As well, I'll flesh out
+        //Update, and Delete... but again, these mock functions are different than updating and deleting from a database... thoughts?
         public int InsertBorrower(Borrower borrower)
         {
             int borrowerRowInserted = new int();

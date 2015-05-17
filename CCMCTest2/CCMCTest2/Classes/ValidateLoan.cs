@@ -13,6 +13,7 @@ namespace CCMCTest2.Classes
 
         public List<string> ValidateLoanProperties(Loan loan)
         {
+            //These examples of error messages, upon meeting mock conditions, places the messages in a list. The actual conditions I'm still working out, if that's what you're looking for//
 
             if (loan.Id == 1)
             {
