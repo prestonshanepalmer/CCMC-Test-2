@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,10 +9,11 @@ namespace CCMCTest2.Classes
 {
     class BorrowersMockDbRespository
     {
-        public void InsertBorrower(Borrower borrower)
+        public int InsertBorrower(Borrower borrower)
         {
+            int borrowerRowInserted = new int();
 
-
+            return borrowerRowInserted;
         }
 
         public List<Borrower> GetBorrowers()
@@ -41,16 +43,19 @@ namespace CCMCTest2.Classes
 
         }
 
-        //public int UpdateBorrower(Borrower borrower)
-        //{
+        public int UpdateBorrower(Borrower borrower)
+        {
+            int borrowerRowUpdated = new int();
 
-            
-        //}
+            return borrowerRowUpdated;
+        }
 
-        //public int DeleteBorrower(int id)
-        //{
+        public int DeleteBorrower(int id)
+        {
+            int borrowerRowsDeleted = new int();
 
-        //}
+            return borrowerRowsDeleted;
+        }
     }
 }
 

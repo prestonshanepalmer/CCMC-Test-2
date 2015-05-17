@@ -21,12 +21,16 @@ namespace CCMCTest2
             borrower1.Gender = Enums.GenderType.Male;
             borrower1.MonthlyIncome = 1.01;
 
+            Borrower borrower2 = new Borrower(3, "Joel");
+            borrower2.Gender = Enums.GenderType.Male;
+            borrower2.MonthlyIncome = 1.01;
+
             loan1.AddBorrower(borrower1);
+            loan1.AddBorrower(borrower2);
 
             
 
             //BorrowersMockDbRespository borrowersListFromDb = new BorrowersMockDbRespository();
-
             //loan1.Borrowers = borrowersListFromDb.GetBorrowers();
 
         }

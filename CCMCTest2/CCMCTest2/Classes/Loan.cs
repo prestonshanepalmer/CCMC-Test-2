@@ -63,7 +63,19 @@ namespace CCMCTest2.Classes
         
         public void AddBorrower(Borrower borrower)
         {
-            Borrowers.Add(borrower);
+            bool checkName = Borrowers.Exists(element => element.Name == borrower.Name);
+            bool checkId = Borrowers.Exists(element => element.Id == borrower.Id);
+
+            if (!checkName && !checkId)
+            {
+                Borrowers.Add(borrower);
+            }
+            else
+            {
+                Console.Write("borrower added already");
+                Console.Read();
+            }
+            
         }
 
     }
